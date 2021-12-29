@@ -42,7 +42,7 @@ main.wrap {
     perspective: 130rem;
 }
 
-main.wrap video {
+main.wrap > video {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -116,7 +116,7 @@ main.wrap video {
     text-shadow: 0 0 1rem aqua;
 }
 
-.wrap .cylinder .face1 .inner > div:hover i {
+.wrap .cylinder article .inner > div:hover i {
     color: lightcyan;
     opacity: 1;
     text-shadow: 0 0 1rem aqua;
@@ -125,7 +125,8 @@ main.wrap video {
 
 /* Face 1 */
 .wrap .cylinder .face1 {
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
 }
 
 .wrap .cylinder .face1 .inner {
@@ -158,6 +159,8 @@ main.wrap video {
 
 /* Face 2 */
 .wrap .cylinder .face2 {
+    backface-visibility: hidden;
+    transform: rotateY(45deg);
 }
 
 .wrap .cylinder .face2 .inner > div {
@@ -187,20 +190,318 @@ main.wrap video {
 
 /* Face 3 */
 .wrap .cylinder .face3 {
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(90deg);
 }
+
+.wrap .cylinder .face3 .inner > div {
+    width: 100%;
+    height: calc(76rem / 3);
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.wrap .cylinder .face3 .inner > div .pic {
+    width: 12rem;
+    height: 12rem;
+    margin: auto 3rem auto 0;
+}
+
+.wrap .cylinder .face3 .inner > div .pic img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 6rem;
+    border: 1px solid #fff;
+}
+
+.wrap .cylinder .face3 .inner > div .info {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap .cylinder .face3 .inner > div .info h2 {
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face3 .inner > div .info p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.wrap .cylinder .face3 .inner > div .info .info__desc {
+    font-family: Arial;
+}
+
+.wrap .cylinder .face3 .inner > div .info .info__date {
+    color: aqua;
+    opacity: 0.5;
+    text-align: end;
+}
+
+/* Face 4 */
 .wrap .cylinder .face4 {
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(135deg);
 }
+
+.wrap .cylinder .face4 .inner > div {
+    width: 100%;
+}
+
+.wrap .cylinder .face4 .inner > div:nth-of-type(1) {
+    height: 60rem;
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face4 .inner > div:nth-of-type(2) {
+    height: 18rem;
+}
+
+.wrap .cylinder .face4 .inner > div video {
+    width: 100%;
+    height: 28rem;
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face4 .inner > div h2 {
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face4 .inner > div p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+.wrap .cylinder .face4 .inner > div:nth-of-type(2) p {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Face 5 */
 .wrap .cylinder .face5 {
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
+
+.wrap .cylinder .face5 .inner > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.wrap .cylinder .face5 .inner > div .tit {
+    margin-bottom: 4rem;
+}
+
+.wrap .cylinder .face5 .inner > div .robot {
+    width: 100%;
+    height: 25rem;
+    border: 1px solid #fff;
+    margin-bottom: 4rem;
+}
+
+.wrap .cylinder .face5 .inner > div .txt {
+    margin-bottom: 4rem;
+}
+
+.wrap .cylinder .face5 .inner > div .reflection {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    transition: all 0.5s;
+}
+
+.wrap .cylinder .face5 .inner > div:hover .reflection {
+    top: -40%;
+}
+
+/* Face 6 */
 .wrap .cylinder .face6 {
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(225deg);
 }
+
+.wrap .cylinder .face6 .inner > div {
+    width: 100%;
+    height: calc(74rem / 4);
+    display: flex;
+}
+
+.wrap .cylinder .face6 .inner > div:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face6 .inner > div i {
+    width: 22%;
+    height: 100%;
+    font-size: 5rem;
+    border-right: 1px solid #fff;
+    text-align: center;
+    line-height: 8rem;
+    padding-right: 4rem;
+}
+
+.wrap .cylinder .face6 .inner > div .con {
+    padding-left: 5rem;
+}
+
+.wrap .cylinder .face6 .inner > div .con p {
+    width: 90%;
+    font-size: 1.4rem;
+    font-family: Arial;
+}
+
+/* Face 7 */
 .wrap .cylinder .face7 {
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(270deg);
 }
+
+.wrap .cylinder .face7 .inner > div > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap .cylinder .face7 .inner > div > div > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrap .cylinder .face7 .inner > div > div h2 {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 2px 2px 5px #555;
+}
+
+.wrap .cylinder .face7 .inner > div > div .txt2 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 10%;
+}
+
+.wrap .cylinder .face7 .inner > div > div .line {
+    position: absolute;
+    width: 90%;
+    top: -10%;
+    right: 0;
+    z-index: 2;
+}
+
+/* Face 8 */
 .wrap .cylinder .face8 {
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(315deg);
+}
+
+.wrap .cylinder .face8 .inner > div {
+    width: calc(58rem / 2);
+    height: calc(78rem / 2);
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(1) {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(2) {
+    float: left;
+    margin-right: 2rem;
+    text-align: center;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(3) {
+    float: right;
+    text-align: center;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(1) i {
+    font-size: 18rem;
+    margin-top: 4rem;
+    margin-right: 4rem;
+    transition: all 0.5s;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(1) span {
+    font-weight: bold;
+    font-size: 10rem;
+    position: relative;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(1) span em {
+    font: bold normal 60px/1 'arial';
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(2) i {
+    font-size: 12rem;
+    color: #fff;
+    opacity: 0.9;
+    transition: all 0.5s;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(3) i {
+    font-size: 12rem;
+    color: #fff;
+    opacity: 0.9;
+    transition: all 0.5s;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(2) h3 {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 2rem;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(3) h3 {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 2rem;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(2) p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(3) p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(2) span {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(3) span {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(2) span em {
+    font: bold 2rem/1 'arial';
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    right: -1.5rem;
+}
+
+.wrap .cylinder .face8 .inner > div:nth-of-type(3) span em {
+    font: bold 2rem/1 'arial';
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    right: -1.5rem;
 }
